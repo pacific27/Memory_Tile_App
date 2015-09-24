@@ -61,6 +61,17 @@ h2 {
   font-size: 35px;
 }
 
+fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove (internal value);
+}
+
 /*
 ===========================================================
                      Layout
@@ -93,11 +104,28 @@ h2 {
   background-color: black;
 }
 
+.timer {
+  text-align: center;
+}
+
+.btn {
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400px;
+  letter-spacing: .5px;
+  margin: 0;
+  text-transform: uppercase;
+  background: black;
+}
+
 /*
 ===========================================================
                      State Rules
 ===========================================================
 */
+
 img {
   margin: 3px;
 }

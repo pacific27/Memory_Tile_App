@@ -13,6 +13,24 @@
   </header>
 
   <section class="container game-controls">
+    <div class="timer">
+      <fieldset>
+      <legend align="center">Game Timer</legend>
+      <span id="hours">00</span> :
+      <span id="minutes">00</span> :
+      <span id="seconds">00</span> ::
+      <span id="milliseconds">000</span>
+    </div>
+
+    <button type="button" class="btn">Shuffle Deck</button>
+
+    <form action="">
+      <select class="button" id="deck" name="decks" placeholder="Decks">
+        <option value="linux">Linux Distro</option>
+        <option value="seinfeld">Seinfeld</option>
+        <option value="starTrek">Star Trek</option>
+      </select>
+    </form>
   </section>
 
   <section class="container" id="memory-board">
