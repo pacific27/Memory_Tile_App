@@ -60,4 +60,23 @@ var memory = (function() {
           ]
       };//end arrays
 
+
+
+      /* Randomly sort an array by calculating a value within array
+       * range and then swaps values by randomly calculated value
+       */
+      Array.prototype.randomizeArray = function() {
+
+              var i = this.length;
+              var j = 0;
+              var temp = "";
+
+              while (--i > 0) {
+                  j = Math.floor(Math.random() * (i + 1));
+                  temp = this[j];
+                  this[j] = this[i];
+                  this[i] = temp;
+              }
+          } //end randomizeArray
+
 })();
