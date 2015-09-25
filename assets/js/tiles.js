@@ -60,6 +60,8 @@ var memory = (function() {
           ]
       };//end arrays
 
+      /*Global Variables*/
+      var deck = "";
 
 
       /* Randomly sort an array by calculating a value within array
@@ -78,5 +80,10 @@ var memory = (function() {
                   this[i] = temp;
               }
           } //end randomizeArray
+
+      /* Checks which deck the user has selected to play*/
+      function deckSelected() {
+        deck = $('#deck option:selected').val();
+      } //end deckSelected
 
 })();
