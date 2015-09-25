@@ -62,7 +62,7 @@ var memory = (function() {
 
       /*Global Variables*/
       var deck = "";
-      var CardBackGround = "";
+      var cardBackGround = "";
 
 
       /* Randomly sort an array by calculating a value within array
