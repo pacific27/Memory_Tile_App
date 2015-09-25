@@ -105,7 +105,7 @@ fieldset {
 }
 
 .game-controls {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   overflow: auto;
   border-top: 3px black solid;
   border-bottom: 3px black solid;
@@ -124,14 +124,12 @@ fieldset {
 }
 
 .btn {
-  font-size: 12px;
   height: 50px;
   float: left;
   margin: 5px 0px 0px 45px;
 }
 
 .btn-right {
-  font-size: 12px;
   height: 50px;
   margin: 5px 0px 0px 10px;
 }
