@@ -94,14 +94,10 @@ fieldset {
   width: 33%;
 }
 
-.row {
-  margin-left: 2px;
-  background-color: purple;
-}
-
 #memory-board {
   height: 900px;
   clear: both;
+
 }
 
 .game-controls {
@@ -145,6 +141,17 @@ fieldset {
 ===========================================================
 */
 
-img {
-  margin: 3px;
+.tile {
+	background: url(../img/card_bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 10%;
+	border: #000 1px solid;
+	width: 105px;
+	height: 105px;
+	float: left;
+	margin: 10px 0px 0px 11px;
+	padding: 20px;
+	font-size: 64px;
+	cursor: pointer;
+	text-align: center;
 }

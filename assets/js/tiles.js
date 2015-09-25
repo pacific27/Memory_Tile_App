@@ -1,4 +1,4 @@
-$('Document').ready(function(){
+$('document').ready(function(){
 
     $('#shuffle').click(memory.shuffle);
     $('#deck').change(memory.shuffle);
@@ -92,20 +92,53 @@ var memory = (function() {
 
         switch(deck) {
           case 'linux':
-            $('[id^=card_]').css('background', 'url(assets/img/linux/card_bg.jpg)');
-            cardBackGround = 'assets/img/linux/card_bg.jpg';
+            $('[id^=card_]').css('background', 'url(assets/img/linux/linux_bg.jpg)');
+            cardBackGround = 'assets/img/linux/linux_bg.jpg';
             break;
 
           case 'seinfeld':
-            $('[id^=card_]').css('background', 'url(assets/img/seinfeld/card_bg.jpg)');
-            cardBackGround = 'assets/img/seinfeld/card_bg.jpg';
+            $('[id^=card_]').css('background', 'url(assets/img/seinfeld/seinfeldLogo.jpg)');
+            cardBackGround = 'assets/img/seinfeld/seinfeldLogo.jpg';
             break;
 
-          case 'seinfeld':
-            $('[id^=card_]').css('background', 'url(assets/img/starTrek/card_bg.jpg)');
-            cardBackGround = 'assets/img/starTrek/card_bg.jpg';
+          case 'starTrek':
+            $('[id^=card_]').css('background', 'url(assets/img/starTrek/starTrekLogo.jpg)');
+            cardBackGround = 'assets/img/starTrek/starTrekLogo.jpg';
             break;
-        }
-      }
+        } // End Switch
+      } // End changeBackGround
+
+      /*Creates the cards for the memory game after randomizing array selected by user putting each card into its own <div>*/
+      function shuffle() {
+
+              var output = '';
+
+              //call deckSelected to find which deck to shuffle/create
+              deckSelected();
+
+              //shuffle the deck deckSelected returned
+              arrays[deck].randomizeArray();
+
+              /*Now that cards are randomized within the array create the cards for the
+              game board giving each a unique id and passing (cardId,val) onClick*/
+              for (var i = 0; i < arrays[deck].length; i++) {
+                  output += '<div class="tile" id="card_' + i + '" onclick="memory.flipCard(this,\'' + arrays[deck][i] + '\')"></div>';
+              }
+
+              //put the newly created cards into the gameboard
+              document.getElementById('memory-board').innerHTML = output;
+
+              //Change the back of card to represent the deck that is being played
+              changeBackground();
+          } //End Shuffle
+
+      var public = {
+          shuffle: shuffle,
+          arrays: arrays,
+          deckSelected: deckSelected,
+          changeBackground: changeBackground
+      };
+
+      return public;
 
 })();
