@@ -89,6 +89,16 @@ fieldset {
   background-color: gray;
 }
 
+.col-1-3 {
+  float: left;
+  width: 33%;
+}
+
+.row {
+  margin-left: 2px;
+  background-color: purple;
+}
+
 #memory-board {
   height: 900px;
   clear: both;
@@ -96,6 +106,8 @@ fieldset {
 
 .game-controls {
   overflow: auto;
+  border-top: 3px black solid;
+  border-bottom: 3px black solid;
 }
 
 /*
@@ -103,16 +115,6 @@ fieldset {
                      Component
 ===========================================================
 */
-
-.row {
-  margin-left: 2px;
-  background-color: black;
-}
-
-.col-1-3 {
-  float: left;
-  width: 33%;
-}
 
 .timer {
   text-align: center;
