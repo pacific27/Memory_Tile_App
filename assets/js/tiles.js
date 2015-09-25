@@ -62,6 +62,7 @@ var memory = (function() {
 
       /*Global Variables*/
       var deck = "";
+      var CardBackGround = "";
 
 
       /* Randomly sort an array by calculating a value within array
@@ -85,5 +86,26 @@ var memory = (function() {
       function deckSelected() {
         deck = $('#deck option:selected').val();
       } //end deckSelected
+
+      /* Sets the deck background to user selected deck*/
+      function changeBackground() {
+
+        switch(deck) {
+          case 'linux':
+            $('[id^=card_]').css('background', 'url(assets/img/linux/card_bg.jpg)');
+            cardBackGround = 'assets/img/linux/card_bg.jpg';
+            break;
+
+          case 'seinfeld':
+            $('[id^=card_]').css('background', 'url(assets/img/seinfeld/card_bg.jpg)');
+            cardBackGround = 'assets/img/seinfeld/card_bg.jpg';
+            break;
+
+          case 'seinfeld':
+            $('[id^=card_]').css('background', 'url(assets/img/starTrek/card_bg.jpg)');
+            cardBackGround = 'assets/img/starTrek/card_bg.jpg';
+            break;
+        }
+      }
 
 })();
