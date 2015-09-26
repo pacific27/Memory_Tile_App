@@ -217,7 +217,7 @@ var memory = (function() {
                     } //End if
                 } //End if
                 else {
-                    alert("This card has previously been selected, please choose a different card.");
+                    alert("This card has previously been selected, please choose a different tile.");
                 } //End else
             } //End flipCard
 
