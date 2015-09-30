@@ -48,7 +48,7 @@ var memory = (function() {
               'assets/img/starTrek/starTrekKirk', 'assets/img/starTrek/starTrekKirk',
               'assets/img/starTrek/starTrekSpock', 'assets/img/starTrek/starTrekSpock',
               'assets/img/starTrek/starTrekQuark', 'assets/img/starTrek/starTrekQuark',
-              'assets/img/starTrek/starTrekMartok', 'assets/img/starTrek/starTrekMartok',
+              'assets/img/starTrek/starTrekKira', 'assets/img/starTrek/starTrekKira',
               'assets/img/starTrek/starTrekGarok', 'assets/img/starTrek/starTrekGarok',
               'assets/img/starTrek/starTrekDax', 'assets/img/starTrek/starTrekDax',
               'assets/img/starTrek/starTrekGeordi', 'assets/img/starTrek/starTrekGeordi',
@@ -123,6 +123,11 @@ var memory = (function() {
 
               var output = '';
 
+              card_previous = [];
+              card_matched = [];
+              cards_flipped.length = 0;
+              userAttempt = 0;
+
               //call deckSelected to find which deck to shuffle/create
               deckSelected();
 
@@ -173,6 +178,7 @@ var memory = (function() {
 
                             /*Compare card values on the stack after two have been clicked to see if they are the same card.*/
                             if (memory_values[0] == memory_values[1]) {
+                                //Value used to later check if all tiles have been flipped
                                 cards_flipped += 2;
 
                                 /*Add cards matched to array used to safeguard against user picking cards previously matched*/
@@ -183,7 +189,7 @@ var memory = (function() {
                                 temp1 = "";
                                 temp2 = "";
 
-                                /*Clear out arrays/stack because cards were a match to get array ready for next user selection*/
+                                /*Clear out arrays(stack) because cards were a match to get array ready for next user selection*/
                                 memory_values = [];
                                 memory_card_id = [];
 
@@ -192,9 +198,7 @@ var memory = (function() {
     				                        //stop timer & calculate attempts call get player score and pass (name, time , attempts)
                                     alert("Congratulations!! This round took " + userAttempt / 2 + " attempts");
                                     document.getElementById('memory-board').innerHTML = "";
-    				                        card_previous = [];
-                                    userAttempt = 0;
-                                    card_matched = [];
+
                                     shuffle();
                                 } //End if
                             } //End if
