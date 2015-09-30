@@ -89,7 +89,7 @@ var memory = (function() {
                   temp = this[j];
                   this[j] = this[i];
                   this[i] = temp;
-              }
+              } // end while
           } //end randomizeArray
 
       /* Checks which deck the user has selected to play*/
@@ -122,10 +122,9 @@ var memory = (function() {
       function shuffle() {
 
               var output = '';
-
               card_previous = [];
               card_matched = [];
-              cards_flipped.length = 0;
+              cards_flipped = 0;
               userAttempt = 0;
 
               //call deckSelected to find which deck to shuffle/create
@@ -198,7 +197,6 @@ var memory = (function() {
     				                        //stop timer & calculate attempts call get player score and pass (name, time , attempts)
                                     alert("Congratulations!! This round took " + userAttempt / 2 + " attempts");
                                     document.getElementById('memory-board').innerHTML = "";
-
                                     shuffle();
                                 } //End if
                             } //End if
