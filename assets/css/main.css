@@ -85,7 +85,7 @@ fieldset {
 
 .container {
   width: 960px;
-  margin: auto;
+  margin: 0 auto;
   background-color: gray;
 }
 
@@ -100,7 +100,6 @@ fieldset {
 }
 
 .game-controls {
-  margin-bottom: 5px;
   overflow: auto;
   border-top: 3px black solid;
   border-bottom: 3px black solid;
