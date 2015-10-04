@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+  <title>Memory Tile Game</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
   <script rel="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
@@ -13,10 +14,9 @@
   </header>
 
   <section class="container game-controls">
-
     <div class="col-1-3">
-        <input type="text" class="userInput" id="playerName" placeholder="Enter Player Name Here"></textarea>
-        <input type="text" class="userInput" id="playerPassword" placeholder="Enter Password Here"></textarea>
+        <input type="text" class="userInput" id="playerName" placeholder="Enter Player Name Here">
+        <input type="text" class="userInput" id="playerPassword" placeholder="Enter Password Here">
         <button type="button" class="btn btn-left">Login</button>
         <button type="button" class="btn btn-left">Register</button>
     </div>
@@ -28,24 +28,18 @@
     </div>
 
     <div class="col-1-3">
-        <form action="">
-          <select class="btn btn-right" id="deck" name="decks" placeholder="Decks">
-            <option value="Choose A Deck">Deck To Play</option>
+          <select class="btn btn-right" id="deck" name="decks">
+            <option value="Deck To Play">Deck To Play</option>
             <option value="linux">Linux Distro</option>
             <option value="seinfeld">Seinfeld</option>
             <option value="starTrek">Star Trek</option>
           </select>
           <button type="button" class="btn btn-right" id="shuffle">Shuffle Deck</button>
           <button type="button" class="btn btn-right">Leaderboard</button>
-        </form>
     </div>
-
   </section>
 
-  <section class="container" id="memory-board">
-
-
-  </section>
+  <section class="container" id="memory-board"></section>
 
 <script src="assets/js/tiles.js"></script>
 </body>
