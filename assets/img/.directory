@@ -1,5 +1,8 @@
 [Dolphin]
+GroupedSorting=true
 PreviewsShown=true
-Timestamp=2015,9,16,14,5,32
+Timestamp=2015,10,7,16,23,19
 Version=3
-ViewMode=2
+
+[Settings]
+HiddenFilesShown=true
