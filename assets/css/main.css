@@ -163,7 +163,7 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-	background-image: url(..assets/img/card_bg.jpg);
+	/*background-image: url(../img/card_bg.jpg);*/
 	border: 1px solid #000;
 	cursor: pointer;
 }

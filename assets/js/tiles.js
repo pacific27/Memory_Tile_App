@@ -102,17 +102,17 @@ var memory = (function() {
 
         switch(deck) {
           case 'linux':
-            $('[id^=card_]').css('background', 'url(assets/img/linux/linux_bg.jpg)');
+            $('[id^=card_]').css('background-image', 'url(assets/img/linux/linux_bg.jpg)');
             cardBackGround = 'assets/img/linux/linux_bg.jpg';
             break;
 
           case 'seinfeld':
-            $('[id^=card_]').css('background', 'url(assets/img/seinfeld/seinfeldLogo.jpg)');
+            $('[id^=card_]').css('background-image', 'url(assets/img/seinfeld/seinfeldLogo.jpg)');
             cardBackGround = 'assets/img/seinfeld/seinfeldLogo.jpg';
             break;
 
           case 'starTrek':
-            $('[id^=card_]').css('background', 'url(assets/img/starTrek/starTrekLogo.jpg)');
+            $('[id^=card_]').css('background-image', 'url(assets/img/starTrek/starTrekLogo.jpg)');
             cardBackGround = 'assets/img/starTrek/starTrekLogo.jpg';
             break;
         } // End Switch
@@ -156,7 +156,7 @@ var memory = (function() {
 
                     if (card.innerHTML == "" && memory_values.length < 2) {
 
-                        card.style.background = 'url(' + val + '.jpg) no-repeat';
+                        card.style.backgroundImage = 'url(' + val + '.jpg)';
                         card.innerHTML = "";
 
                         /*If this is the first card clicked push card value onto the memory_values(stack)
@@ -205,9 +205,9 @@ var memory = (function() {
                                 function flipCardBack() {
                                         var card_1 = document.getElementById(memory_card_id[0]);
                                         var card_2 = document.getElementById(memory_card_id[1]);
-                                        card_1.style.background = 'url(' + cardBackGround + ') no-repeat';
+                                        card_1.style.backgroundImage = 'url(' + cardBackGround + ')';
                                         card_1.innerHTML = "";
-                                        card_2.style.background = 'url(' + cardBackGround + ') no-repeat';
+                                        card_2.style.backgroundImage = 'url(' + cardBackGround + ')';
                                         card_2.innerHTML = "";
     				                            card_previous = [];
                                         memory_values = [];
