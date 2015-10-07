@@ -87,6 +87,9 @@ fieldset {
                      Layout
 ===========================================================
 */
+body {
+  background-color: firebrick;
+}
 
 .header-main {
   text-align: center;
@@ -151,17 +154,17 @@ fieldset {
 */
 
 .tile {
-	background: url(..assets/img/card_bg.jpg);
-	background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  float: left;
   position: relative;
-	border: 1px solid #000;
-	width: 15.666%;
+  width: 15.666%;
   padding-bottom: 15.666%;
   margin-left: 0.7%;
   margin-top: 0.7%;
-	float: left;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	background-image: url(..assets/img/card_bg.jpg);
+	border: 1px solid #000;
 	cursor: pointer;
 }
 
